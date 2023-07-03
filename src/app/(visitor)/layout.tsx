@@ -1,8 +1,6 @@
 import '../globals.css'
-import { Inter } from 'next/font/google'
 import Navbar from "@/app/components/navbar";
-
-const inter = Inter({ subsets: ['latin'] })
+import {lexend} from "@/app/fonts";
 
 export const metadata = {
   title: 'Create Next App',
@@ -16,9 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={lexend.className}>
       <Navbar/>
-      {children}</body>
+      {children}
+      </body>
     </html>
   )
 }
