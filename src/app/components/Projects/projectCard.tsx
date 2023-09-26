@@ -1,7 +1,7 @@
 import React from "react";
 import { Project } from "@prisma/client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
+import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import { faSquareUpRight } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
