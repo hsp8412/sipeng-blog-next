@@ -16,12 +16,12 @@ const fetchPost = async (id: string) => {
 const Page = async ({ params }: { params: { id: string } }) => {
   const post = await fetchPost(params.id);
   return (
-    <div className="flex flex-col xl:flex-row py-5 px-5 md:px-14 bg-gray-200">
-      <div className={"w-full md:w-9/12"}>
+    <div className="flex flex-col lg:flex-row py-5 px-5 lg:px-14 bg-gray-200 w-full">
+      <div className={"w-full lg:w-9/12"}>
         <PostContent post={post} />
         <PostComment />
       </div>
-      <div className={"md:w-3/12"}>
+      <div className={"lg:w-3/12 flex justify-center mb-auto"}>
         <InfoCard />
       </div>
     </div>

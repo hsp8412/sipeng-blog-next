@@ -3,7 +3,7 @@ import PhotoList from "@/app/components/gallery/photoList";
 
 const Page = () => {
   return (
-    <div>
+    <div className="bg-gray-200">
       <PhotoList />
     </div>
   );

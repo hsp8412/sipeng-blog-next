@@ -1,5 +1,6 @@
 import React from "react";
 import SocialIcons from "@/app/components/socialIcons";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -9,21 +10,21 @@ const Footer = () => {
     >
       <div>
         <div className="flex justify-center flex-wrap gap-3 text-2xl text-white mb-5 md:mb-0">
-          <a href="" className="hover:underline">
+          <Link href="/" className="hover:underline">
             Home
-          </a>
-          <a href="" className="hover:underline">
+          </Link>
+          <Link href="/posts" className="hover:underline">
             Posts
-          </a>
-          <a href="" className="hover:underline">
+          </Link>
+          <Link href="/projects" className="hover:underline">
             Projects
-          </a>
-          <a href="" className="hover:underline">
+          </Link>
+          <Link href="/gallery" className="hover:underline">
             Gallery
-          </a>
-          <a href="" className="hover:underline">
+          </Link>
+          <Link href="/contact" className="hover:underline">
             Contact
-          </a>
+          </Link>
         </div>
         <p className="text-xl text-white mt-2 mb-2 text-center md:text-start">
           Copyright © 2023 | Sipeng He

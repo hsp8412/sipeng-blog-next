@@ -27,7 +27,11 @@ const Page = () => {
             Hello World
           </h1>
           <div className="mt-4 h-[36px] md:h-[60px]">
-            <TypeText text="I am Sipeng He" delay={100} />
+            <TypeText delay={75}>
+              <p className="text-white md:text-6xl text-3xl text-center font-bold">
+                I am Sipeng He
+              </p>
+            </TypeText>
           </div>
           <h1 className="mt-6 text-white text-xl text-center">
             Computer Science Student | Developer
