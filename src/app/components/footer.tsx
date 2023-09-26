@@ -3,7 +3,10 @@ import SocialIcons from "@/app/components/socialIcons";
 
 const Footer = () => {
   return (
-    <div className="bg-gradient-to-t from-indigo-800 to-sky-400 px-5 md:px-10 py-20 flex flex-col flex-col-reverse md:flex-row justify-between">
+    <div
+      className="bg-cover bg-center px-5 md:px-10 py-20 flex flex-col flex-col-reverse md:flex-row justify-between"
+      style={{ backgroundImage: "url('/triangles.png')" }}
+    >
       <div>
         <div className="flex justify-center flex-wrap gap-3 text-2xl text-white mb-5 md:mb-0">
           <a href="" className="hover:underline">

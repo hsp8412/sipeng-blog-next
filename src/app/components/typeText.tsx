@@ -9,7 +9,7 @@ type props = {
 const TypeText = ({ text, delay }: props) => {
   const [displayText, setDisplayText] = useState("");
   useEffect(() => {
-    const typeText = (i) => {
+    const typeText = (i: number) => {
       if (i < text.length) {
         setTimeout(() => {
           setDisplayText((prevText) => prevText + text.charAt(i));

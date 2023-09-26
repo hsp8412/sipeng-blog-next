@@ -7,6 +7,7 @@ import {
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -48,12 +49,12 @@ const Navbar = () => {
     return (
       <div>
         <nav className="flex relative h-[80px] items-center justify-center text-white md:justify-start px-10 z-[2]">
-          <a className="md:me-10" href="/">
+          <Link className="md:me-10" href="/">
             <FontAwesomeIcon icon={faEarthAsia} size="2x" />
-          </a>
+          </Link>
           <ul
             className={`${
-              showMenu ? "left-0  z-2 bg-white" : "left-[-100%] "
+              showMenu ? "left-0 z-10 bg-white" : "left-[-100%]"
             } top-[80px] flex flex-col w-full absolute transition-all ease-in md:static md:flex-row md:h-full md:border-0`}
           >
             {navItems.map((item) => (
@@ -61,12 +62,12 @@ const Navbar = () => {
                 key={item.label}
                 className="flex items-center md:mx-2 border-1 md:border-0"
               >
-                <a
+                <Link
                   href={item.link}
-                  className="text-center w-full table hover:bg-gray-100 text-black md:text-white transition-all ease-in-out duration-200 rounded-0 font-bold text-2xl px-3 py-2 md:hover:rounded-3xl"
+                  className="text-center w-full table hover:bg-gray-100 hover:text-black  text-black md:text-white transition-all ease-in-out duration-200 rounded-0 font-bold text-2xl px-3 py-2 md:hover:rounded-3xl"
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -82,26 +83,30 @@ const Navbar = () => {
   }
 
   return (
-    <div>
+    <div className={"z-10"}>
       <nav className="flex relative h-[80px] items-center justify-center md:justify-start px-10 border border-b-2">
-        <a className="md:me-10" href="/">
+        <Link className="md:me-10" href="/">
           <FontAwesomeIcon icon={faEarthAsia} size="2x" />
-        </a>
+        </Link>
         <ul
           className={`${
             showMenu
-              ? "left-0 h-[250px] z-1 bg-white"
-              : "left-[-100%] h-[250px]"
+              ? "left-0 h-[240px] z-1 bg-white"
+              : "left-[-100%] h-[240px]"
           } top-[80px] flex flex-col w-full absolute transition-all ease-in border-b-2 md:static md:flex-row md:h-full md:border-0`}
         >
           {navItems.map((item) => (
-            <li key={item.label} className="flex items-center md:mx-2">
-              <a
+            <li
+              key={item.label}
+              className="flex items-center md:mx-2 h-[60px] md:h-auto"
+              onClick={toggleShowMenu}
+            >
+              <Link
                 href={item.link}
                 className="text-center w-full table hover:bg-gray-100 transition-all ease-in-out duration-200 rounded-0 font-bold text-2xl px-3 py-2 md:hover:rounded-3xl"
               >
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

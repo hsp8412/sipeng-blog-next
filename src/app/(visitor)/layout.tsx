@@ -2,6 +2,12 @@ import "../globals.css";
 import Navbar from "@/app/components/navbar";
 import { lexend } from "@/app/fonts";
 import Footer from "@/app/components/footer";
+// The following import prevents a Font Awesome icon server-side rendering bug,
+// where the icons flash from a very large icon down to a properly sized one:
+import "@fortawesome/fontawesome-svg-core/styles.css";
+// Prevent fontawesome from adding its CSS since we did it manually above:
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false; /* eslint-disable import/first */
 
 export const metadata = {
   title: "Create Next App",
@@ -10,15 +16,20 @@ export const metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: {
   children: React.ReactNode;
+  modal: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body className={lexend.className}>
-        <Navbar />
-        {children}
-        <Footer />
+        <div className={"min-h-screen flex flex-col"}>
+          <Navbar />
+          <div className={"flex flex-col flex-grow"}>{children}</div>
+          <Footer />
+          {modal}
+        </div>
       </body>
     </html>
   );
