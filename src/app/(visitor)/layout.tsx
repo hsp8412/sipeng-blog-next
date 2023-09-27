@@ -7,6 +7,7 @@ import Footer from "@/app/components/footer";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 // Prevent fontawesome from adding its CSS since we did it manually above:
 import { config } from "@fortawesome/fontawesome-svg-core";
+import GoogleAnalytics from "@/app/components/googleAnalytics";
 config.autoAddCss = false; /* eslint-disable import/first */
 
 export const metadata = {
@@ -24,6 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={lexend.className}>
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+          <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        ) : null}
         <div className={"min-h-screen flex flex-col"}>
           <Navbar />
           <div className={"flex flex-col flex-grow"}>{children}</div>
