@@ -55,7 +55,7 @@ const Page = () => {
         <h2 className="text-center text-3xl my-3">Let me introduce myself.</h2>
         <div className="flex flex-col lg:flex-row justify-between items-center gap-5 md:gap-10 px-3 md:px-10 lg:px-40 my-4">
           <Image
-            src="/headshot.PNG"
+            src="/headshot.png"
             alt="headshot"
             width={200}
             height={200}
