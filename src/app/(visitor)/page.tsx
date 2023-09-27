@@ -21,7 +21,7 @@ const canadaFlag = "\uD83C\uDDE8\uD83C\uDDE6";
 const Page = () => {
   return (
     <div className="w-full">
-      <header className="relative mt-[-80px] z-[1] min-h-screen header-banner bg-header bg-fixed bg-cover bg-center bg-no-repeat">
+      <header className="relative mt-[-80px] z-[1] min-h-screen header-banner bg-header bg-scroll xl:bg-fixed bg-cover bg-center bg-no-repeat">
         <div className="header-content absolute inset-0 flex flex-col justify-items-center items-center py-[80px] px-5 h-full">
           <h1 className="text-white text-2xl md:text-3xl mt-20 md:mt-36 font-bold">
             Hello World
