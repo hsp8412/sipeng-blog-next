@@ -10,6 +10,7 @@ import {
   faGraduationCap,
   faHouse,
   faLocationDot,
+  faPersonBiking,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { maShanZheng } from "@/app/fonts";
@@ -23,7 +24,7 @@ const Page = () => {
     <div className="">
       <header className="header-banner relative bg-fixed bg-header bg-center bg-no-repeat bg-cover h-screen relative mt-[-80px] z-[1]">
         <div className="header-content flex flex-col justify-items-center items-center py-[80px] px-5 h-full">
-          <h1 className="text-white text-3xl mt-20 md:mt-36 text-indigo-500 font-bold">
+          <h1 className="text-white text-2xl md:text-3xl mt-20 md:mt-36 text-indigo-500 font-bold">
             Hello World
           </h1>
           <div className="mt-4 h-[36px] md:h-[60px]">
@@ -61,21 +62,21 @@ const Page = () => {
             className="rounded-3xl"
           />
           <div className="text-2xl">
-            I am a BSc student studying computer science at the{" "}
-            <span className="text-red-500 font-semibold">
-              University of Calgary
-            </span>
-            . I have worked for{" "}
-            <span className="text-red-500 font-semibold">
-              Alberta Health Services
+            I am currently pursuing a BSc in{" "}
+            <span className={"font-semibold text-rose-600"}>
+              Computer Science
             </span>{" "}
-            and{" "}
-            <span className="text-red-500 font-semibold">
-              Oncology Outcomes (O2)
+            at the University of Calgary. My professional experience includes
+            roles as an{" "}
+            <span className="font-semibold text-rose-600">
+              automation developer
             </span>{" "}
-            as automation & web developer. I am passionate about coding and I am
-            interested in exploring careers in IT, particularly web/software
-            development, DevOps or testing.
+            &{" "}
+            <span className={"font-semibold text-rose-600"}>web developer</span>{" "}
+            for both Alberta Health Services and Oncology Outcomes (O2).
+            Passionate about coding, I am keen on delving deeper into the IT
+            sector, with a particular interest in web/software development,
+            DevOps, and testing.
           </div>
         </div>
       </section>
@@ -103,7 +104,7 @@ const Page = () => {
               </div>
               <p className="text-2xl">
                 Calgary, AB,{" "}
-                <span className="text-red-500 font-bold">Canada</span>{" "}
+                <span className="text-red-600 font-bold">Canada</span>{" "}
                 {canadaFlag}
               </p>
             </div>
@@ -113,7 +114,7 @@ const Page = () => {
                 <FontAwesomeIcon icon={faHouse} size="xl" />
                 <h5 className="text-2xl font-semibold">Hometown:</h5>
               </div>
-              <p className="text-2xl">Shenzhen, Guangdong, China {chinaFlag}</p>
+              <p className="text-2xl">Shenzhen, Guangdong, China</p>
             </div>
             <hr />
             <div className="my-5">
@@ -144,7 +145,7 @@ const Page = () => {
             <hr />
             <div className="my-5">
               <div className="flex justify-start items-center gap-2 text-indigo-500">
-                <FontAwesomeIcon icon={faBuilding} size="xl" />
+                <FontAwesomeIcon icon={faPersonBiking} size="xl" />
                 <h5 className="text-2xl font-semibold">Hobbies:</h5>
               </div>
               <p className="text-2xl">Postcrossing, Ukulele, Hiking, Biking</p>
@@ -157,7 +158,20 @@ const Page = () => {
             </h4>
             <div className="my-5">
               <div className="mb-1 text-xl font-medium dark:text-white">
-                HTML/CSS/JavaScript
+                HTML/CSS
+              </div>
+              <div className="w-full h-6 bg-gray-200 rounded-full dark:bg-gray-700">
+                <div
+                  className="h-6 bg-indigo-500 rounded-full dark:bg-blue-500 text-center text-white"
+                  style={{ width: "90%" }}
+                >
+                  90%
+                </div>
+              </div>
+            </div>
+            <div className="my-5">
+              <div className="mb-1 text-xl font-medium dark:text-white">
+                JavaScript/TypeScript
               </div>
               <div className="w-full h-6 bg-gray-200 rounded-full dark:bg-gray-700">
                 <div
@@ -183,7 +197,7 @@ const Page = () => {
             </div>
             <div className="my-5">
               <div className="mb-1 text-xl font-medium dark:text-white">
-                C#/ASP.NET core
+                tailwind CSS
               </div>
               <div className="w-full h-6 bg-gray-200 rounded-full dark:bg-gray-700">
                 <div
@@ -196,7 +210,7 @@ const Page = () => {
             </div>
             <div className="my-5">
               <div className="mb-1 text-xl font-medium dark:text-white">
-                jQuery
+                C#/ASP.NET core
               </div>
               <div className="w-full h-6 bg-gray-200 rounded-full dark:bg-gray-700">
                 <div
@@ -233,19 +247,7 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div className="my-5">
-              <div className="mb-1 text-xl font-medium dark:text-white">
-                tailwind CSS
-              </div>
-              <div className="w-full h-6 bg-gray-200 rounded-full dark:bg-gray-700">
-                <div
-                  className="h-6 bg-indigo-500 rounded-full dark:bg-blue-500 text-center text-white"
-                  style={{ width: "80%" }}
-                >
-                  80%
-                </div>
-              </div>
-            </div>
+
             <div className="my-5">
               <div className="mb-1 text-xl font-medium dark:text-white">
                 Java/Spring Boot

@@ -8,20 +8,14 @@ type props = {
 };
 
 const ProjectModal = ({ children }: props) => {
-  const cancelButtonRef = useRef(null);
   const router = useRouter();
-  // const pathname = usePathname();
 
-  // usePathname  useEffect(() => {
-  //     if (pathname.match()) {
-  //       document.body.style.overflow = "hidden"; // Prevent scrolling
-  //     }
-  //
-  //     // Clean up (optional but recommended)
-  //     return () => {
-  //       document.body.style.overflow = "auto";
-  //     };
-  //   }, []);
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
 
   return (
     <div
