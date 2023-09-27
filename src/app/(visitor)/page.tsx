@@ -2,7 +2,6 @@ import React from "react";
 import TypeText from "@/app/components/typeText";
 import HeroButton from "@/app/components/buttons/heroButton";
 import SocialIcons from "@/app/components/socialIcons";
-import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBuilding,
@@ -17,14 +16,14 @@ import { maShanZheng } from "@/app/fonts";
 import ProfileButton from "@/app/components/buttons/profileButton";
 
 const canadaFlag = "\uD83C\uDDE8\uD83C\uDDE6";
-const chinaFlag = "\uD83C\uDDE8\uD83C\uDDF3";
+// const chinaFlag = "\uD83C\uDDE8\uD83C\uDDF3";
 
 const Page = () => {
   return (
     <div className="">
-      <header className="header-banner relative bg-fixed bg-header bg-center bg-no-repeat bg-cover h-screen relative mt-[-80px] z-[1]">
+      <header className="header-banner relative bg-fixed bg-center bg-cover h-screen mt-[-80px] z-[1]">
         <div className="header-content flex flex-col justify-items-center items-center py-[80px] px-5 h-full">
-          <h1 className="text-white text-2xl md:text-3xl mt-20 md:mt-36 text-indigo-500 font-bold">
+          <h1 className="text-white text-2xl md:text-3xl mt-20 md:mt-36 font-bold">
             Hello World
           </h1>
           <div className="mt-4 h-[36px] md:h-[60px]">
@@ -40,7 +39,7 @@ const Page = () => {
           <a className="mt-6" href="#about">
             <HeroButton>More about me</HeroButton>
           </a>
-          <div className="mt-auto">
+          <div className="mt-10 xl:mt-auto">
             <SocialIcons />
           </div>
         </div>
@@ -54,12 +53,10 @@ const Page = () => {
         </div>
         <h2 className="text-center text-3xl my-3">Let me introduce myself.</h2>
         <div className="flex flex-col lg:flex-row justify-between items-center gap-5 md:gap-10 px-3 md:px-10 lg:px-40 my-4">
-          <Image
+          <img
             src="/headshot.png"
             alt="headshot"
-            width={200}
-            height={200}
-            className="rounded-3xl"
+            className="rounded-3xl w-[200px] h-[200px]"
           />
           <div className="text-2xl">
             I am currently pursuing a BSc in{" "}

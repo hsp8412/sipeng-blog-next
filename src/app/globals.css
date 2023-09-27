@@ -26,6 +26,10 @@
 /*    rgb(var(--background-start-rgb));*/
 /*}*/
 
+.header-banner{
+    background-image: url("/header.jpg");
+}
+
 .header-banner::before {
     content: "";
     position: absolute;
