@@ -16,6 +16,7 @@ const PostsList = ({ posts }: Props) => {
 
   const handleFilterChange = (filter: string) => {
     setCurrentPage(1);
+    console.log(currentPage);
     setFilter(filter);
   };
 
@@ -32,7 +33,10 @@ const PostsList = ({ posts }: Props) => {
 
   const itemsPerPage = 6;
   const pageCount = Math.ceil(filtered.length / itemsPerPage);
+  console.log(filtered);
+  console.log(currentPage);
   const paginated = _.chunk(filtered, itemsPerPage)[currentPage - 1];
+  console.log(paginated);
 
   return (
     <>
@@ -45,7 +49,7 @@ const PostsList = ({ posts }: Props) => {
                   key={post.id}
                   post={post}
                   setActiveFilter={(filter) => {
-                    setFilter(filter);
+                    handleFilterChange(filter);
                   }}
                 />
               </div>
