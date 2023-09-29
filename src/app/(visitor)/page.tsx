@@ -39,7 +39,7 @@ const Page = () => {
           <a className="mt-6" href="#about">
             <HeroButton>More about me</HeroButton>
           </a>
-          <div className="mt-10 xl:mt-auto">
+          <div className="mt-10">
             <SocialIcons />
           </div>
         </div>
