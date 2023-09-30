@@ -33,9 +33,9 @@ const ContactForm = () => {
         alert("Recaptcha failed");
         return;
       }
+      let token = "";
       try {
-        const result = await executeRecaptcha("login");
-        const response = await callRecaptcha(result);
+        token = await executeRecaptcha("login");
       } catch (e) {
         alert("ReCaptcha failed");
         setSubmitted(false);
@@ -47,6 +47,7 @@ const ContactForm = () => {
           lastName,
           email,
           message,
+          token,
         });
       } catch (e: any) {
         alert(
