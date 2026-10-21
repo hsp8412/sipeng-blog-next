@@ -2,6 +2,8 @@ import React from "react";
 import PostsList from "@/app/components/posts/postsList";
 import prisma from "../../../../prisma/prisma";
 
+export const revalidate = 300;
+
 const fetchPosts = async () => {
   return prisma.post.findMany();
 };

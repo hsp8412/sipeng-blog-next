@@ -2,8 +2,10 @@ import React from "react";
 import prisma from "../../../../../prisma/prisma";
 import InfoCard from "@/app/components/posts/infoCard";
 import PostContent from "@/app/components/posts/postContent";
-import { Utterances } from "utterances-react-component";
+import {Utterances} from "utterances-react-component";
 import PostComment from "@/app/components/posts/postComment";
+
+export const revalidate = 300;
 
 const fetchPost = async (id: string) => {
   return prisma.post.findUnique({
@@ -13,7 +15,7 @@ const fetchPost = async (id: string) => {
   });
 };
 
-const Page = async ({ params }: { params: { id: string } }) => {
+const Page = async ({params}: {params: {id: string}}) => {
   const post = await fetchPost(params.id);
   return (
     <div className="flex flex-col lg:flex-row py-5 px-5 lg:px-14 bg-gray-200 w-full">

@@ -3,6 +3,8 @@ import prisma from "../../../../prisma/prisma";
 import ProjectsList from "@/app/components/Projects/projectsList";
 import projectsList from "@/app/components/Projects/projectsList";
 
+export const revalidate = 300;
+
 const Page = async () => {
   const projects = await prisma.project.findMany();
   return (

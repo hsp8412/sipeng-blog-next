@@ -1,7 +1,9 @@
 import prisma from "../../../../../prisma/prisma";
-import { notFound } from "next/navigation";
+import {notFound} from "next/navigation";
 import ImageModal from "@/app/components/gallery/imageModal";
 import PhotoDetails from "@/app/components/gallery/photoDetail";
+
+export const dynamic = "force-dynamic";
 
 interface PhotoModalPageProps {
   params: {
@@ -17,7 +19,7 @@ const fetchPhoto = async (id: string) => {
   });
 };
 
-const PhotoPage = async ({ params }: PhotoModalPageProps) => {
+const PhotoPage = async ({params}: PhotoModalPageProps) => {
   const photo = await fetchPhoto(params.id);
 
   if (!photo) {

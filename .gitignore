@@ -33,3 +33,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# JetBrains IDEs (IntelliJ, WebStorm, Rider)
+.idea/
+*.iml
