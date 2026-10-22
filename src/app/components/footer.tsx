@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div
       className="bg-cover bg-center px-5 md:px-10 py-20 flex flex-col flex-col-reverse md:flex-row justify-between"
-      style={{ backgroundImage: "url('/triangles.png')" }}
+      style={{backgroundImage: "url('/triangles.png')"}}
     >
       <div>
         <div className="flex justify-center flex-wrap gap-3 text-2xl text-white mb-5 md:mb-0">
@@ -27,7 +27,7 @@ const Footer = () => {
           </Link>
         </div>
         <p className="text-xl text-white mt-2 mb-2 text-center md:text-start">
-          Copyright © 2023 | Sipeng He
+          Copyright © 2026 | Sipeng He
         </p>
       </div>
       <div className="flex justify-center mb-6 md:mb-0">

@@ -1,7 +1,7 @@
 import React from "react";
 import PhotoList from "@/app/components/gallery/photoList";
 
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
 
 const Page = () => {
   return (

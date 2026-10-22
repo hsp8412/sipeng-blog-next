@@ -1,8 +1,8 @@
 import React from "react";
-import { Project } from "@prisma/client";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
-import { faSquareUpRight } from "@fortawesome/free-solid-svg-icons";
+import {Project} from "@prisma/client";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faGithubSquare} from "@fortawesome/free-brands-svg-icons";
+import {faSquareUpRight} from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 type Props = {
@@ -17,7 +17,7 @@ const renderLinkIcon = (linkName: string) => {
         icon={faGithubSquare}
         size={"2x"}
         className={
-          "text-neutral-700 hover:text-indigo-500 transition-colors duration-100 ease-out"
+          "text-neutral-700 hover:text-blue-800 transition-colors duration-100 ease-out"
         }
       />
     );
@@ -27,7 +27,7 @@ const renderLinkIcon = (linkName: string) => {
         icon={faSquareUpRight}
         size={"2x"}
         className={
-          "text-neutral-700 hover:text-indigo-500 transition-colors duration-200 ease-in"
+          "text-neutral-700 hover:text-blue-800 transition-colors duration-200 ease-in"
         }
       />
     );
@@ -64,7 +64,7 @@ const renderLinks = (project: Project) => {
     );
 };
 
-const ProjectCard = ({ project, onClick }: Props) => {
+const ProjectCard = ({project, onClick}: Props) => {
   return (
     <div
       className="project-card w-10/12 rounded-2xl shadow-md bg-white hover:shadow-2xl transition-shadow duration-300 ease-in "

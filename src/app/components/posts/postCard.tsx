@@ -1,13 +1,13 @@
 import React from "react";
 import Ellipsis from "react-ellipsis-component";
-import { Post } from ".prisma/client";
+import {Post} from ".prisma/client";
 
 type Props = {
   post: Post;
   setActiveFilter: (tag: string) => void;
 };
 
-const PostCard = ({ post, setActiveFilter }: Props) => {
+const PostCard = ({post, setActiveFilter}: Props) => {
   return (
     <div className="card post-card h-full rounded shadow bg-white hover:shadow-xl transition-shadow duration-600 ease-in">
       <img
@@ -17,7 +17,7 @@ const PostCard = ({ post, setActiveFilter }: Props) => {
       />
       <div className="card-body px-3 py-4">
         <a href={`/posts/${post.id}`} className="post-title-link">
-          <p className="card-title text-2xl font-bold text-blue-500">
+          <p className="card-title text-2xl font-bold text-blue-800">
             {post.title}
           </p>
         </a>

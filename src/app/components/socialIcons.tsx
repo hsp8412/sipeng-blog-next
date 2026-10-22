@@ -1,5 +1,5 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
   faGithubSquare,
@@ -13,7 +13,7 @@ const SocialIcons = () => {
     {
       name: "Linkedin",
       icon: faLinkedin,
-      link: "https://www.linkedin.com/in/sipeng-he-250654190/",
+      link: "https://www.linkedin.com/in/sipeng-he/",
     },
     {
       name: "GitHub",
@@ -30,15 +30,10 @@ const SocialIcons = () => {
       icon: faInstagramSquare,
       link: "https://www.instagram.com/hsp_steven/",
     },
-    {
-      name: "twitter",
-      icon: faTwitterSquare,
-      link: "https://www.twitter.com",
-    },
   ];
   return (
     <div className="icons d-flex justify-content-center text-white">
-      {icons.map(({ name, icon, link }) => (
+      {icons.map(({name, icon, link}) => (
         <a
           key={name}
           href={link}
@@ -48,7 +43,7 @@ const SocialIcons = () => {
         >
           <FontAwesomeIcon
             icon={icon}
-            className="hover:text-indigo-500 transition-all duration-200 ease-in text-4xl lg:text-5xl "
+            className="hover:text-blue-800 transition-all duration-200 ease-in text-4xl lg:text-5xl "
           />
         </a>
       ))}

@@ -1,6 +1,6 @@
 import React from "react";
-import { Post } from ".prisma/client";
-import { act } from "react-dom/test-utils";
+import {Post} from ".prisma/client";
+import {act} from "react-dom/test-utils";
 import _ from "lodash";
 
 type Props = {
@@ -8,7 +8,7 @@ type Props = {
   activeFilter: string;
   setFilter: (filter: string) => void;
 };
-const PostsFilter = ({ posts, activeFilter, setFilter }: Props) => {
+const PostsFilter = ({posts, activeFilter, setFilter}: Props) => {
   let tags = posts.map((post) => post.tags).flat();
   tags = _.uniq(tags);
   return (
@@ -18,8 +18,8 @@ const PostsFilter = ({ posts, activeFilter, setFilter }: Props) => {
           <div
             key={`tag-${tag}`}
             className={`px-2 py-1 ${
-              activeFilter === tag ? "bg-indigo-500" : "bg-teal-500"
-            } hover:bg-indigo-500 text-white rounded-2xl cursor-pointer`}
+              activeFilter === tag ? "bg-blue-800" : "bg-teal-500"
+            } hover:bg-blue-800 text-white rounded-2xl cursor-pointer`}
             onClick={() => {
               setFilter(tag);
             }}
@@ -28,7 +28,7 @@ const PostsFilter = ({ posts, activeFilter, setFilter }: Props) => {
           </div>
         ))}
         <div
-          className={`px-2 py-1 bg-indigo-500 text-white rounded-2xl cursor-pointer hover:bg-teal-500`}
+          className={`px-2 py-1 bg-blue-800 text-white rounded-2xl cursor-pointer hover:bg-teal-500`}
           onClick={() => {
             setFilter("");
           }}

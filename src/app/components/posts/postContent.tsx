@@ -1,5 +1,5 @@
 import React from "react";
-import { Post } from ".prisma/client";
+import {Post} from ".prisma/client";
 import dayjs from "dayjs";
 import ReactMarkdown from "react-markdown";
 
@@ -7,7 +7,7 @@ type Props = {
   post: Post | null;
 };
 
-const PostContent = ({ post }: Props) => {
+const PostContent = ({post}: Props) => {
   if (!post) {
     return <div>Loading...</div>;
   }
@@ -24,7 +24,7 @@ const PostContent = ({ post }: Props) => {
           className="post-avatar w-20 rounded-full"
         />
         <div className="flex flex-col items-start justify-center ms-5 gap-3">
-          <p className=" post-info-author text-2xl md:text-3xl font-semibold text-indigo-500">
+          <p className=" post-info-author text-2xl md:text-3xl font-semibold text-blue-800">
             {"Sipeng He"}
           </p>
           <p className="post-info-date text-xl font-light">

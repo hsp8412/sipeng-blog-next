@@ -1,13 +1,13 @@
-import { useState } from "react";
-import { useFormik } from "formik";
+import {useState} from "react";
+import {useFormik} from "formik";
 import * as Yup from "yup";
-import { sendMessage } from "@/app/services/messageService";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import { callRecaptcha } from "@/app/services/recaptchaService";
+import {sendMessage} from "@/app/services/messageService";
+import {useGoogleReCaptcha} from "react-google-recaptcha-v3";
+import {callRecaptcha} from "@/app/services/recaptchaService";
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
-  const { executeRecaptcha } = useGoogleReCaptcha();
+  const {executeRecaptcha} = useGoogleReCaptcha();
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -24,10 +24,7 @@ const ContactForm = () => {
         .required("Email is required"),
       message: Yup.string().max(2000).required("Please enter your message"),
     }),
-    onSubmit: async (
-      { firstName, lastName, email, message },
-      { resetForm }
-    ) => {
+    onSubmit: async ({firstName, lastName, email, message}, {resetForm}) => {
       setSubmitted(true);
       if (!executeRecaptcha) {
         alert("Recaptcha failed");
@@ -52,7 +49,7 @@ const ContactForm = () => {
       } catch (e: any) {
         alert(
           e.response?.data?.error ??
-            "Error when submitting message. Please try again later."
+            "Error when submitting message. Please try again later.",
         );
       }
       resetForm();
@@ -60,7 +57,7 @@ const ContactForm = () => {
       setSubmitted(false);
     },
   });
-  const { touched, handleSubmit, handleChange, handleBlur, values, errors } =
+  const {touched, handleSubmit, handleChange, handleBlur, values, errors} =
     formik;
   return (
     <form className="" onSubmit={handleSubmit}>
@@ -73,7 +70,7 @@ const ContactForm = () => {
             First Name<span className="text-red-600">*</span>
           </label>
           <input
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:bg-white focus:outline-none focus:ring-blue-500 focus:border-2 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-neutral-700 dark:text-white dark:focus:border-white"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:bg-white focus:outline-none focus:ring-blue-800 focus:border-2 focus:border-blue-800 block w-full p-2.5 dark:bg-neutral-700 dark:border-neutral-700 dark:text-white dark:focus:border-white"
             id="contact-first-name"
             type="text"
             name="firstName"
@@ -93,7 +90,7 @@ const ContactForm = () => {
             Last Name<span className="text-red-600">*</span>
           </label>
           <input
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:bg-white focus:outline-none focus:ring-blue-500 focus:border-2 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-neutral-700 dark:text-white dark:focus:border-white"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:bg-white focus:outline-none focus:ring-blue-800 focus:border-2 focus:border-blue-800 block w-full p-2.5 dark:bg-neutral-700 dark:border-neutral-700 dark:text-white dark:focus:border-white"
             id="contact-last-name"
             type="text"
             name="lastName"
@@ -114,7 +111,7 @@ const ContactForm = () => {
           Email<span className="text-red-600">*</span>
         </label>
         <input
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:bg-white focus:outline-none focus:ring-blue-500 focus:border-2 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-neutral-700 dark:text-white dark:focus:border-white"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:bg-white focus:outline-none focus:ring-blue-800 focus:border-2 focus:border-blue-800 block w-full p-2.5 dark:bg-neutral-700 dark:border-neutral-700 dark:text-white dark:focus:border-white"
           id="contact-email"
           type="email"
           name="email"
@@ -136,7 +133,7 @@ const ContactForm = () => {
         <textarea
           id="contact-message"
           rows={4}
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:bg-white focus:outline-none focus:ring-blue-500 focus:border-2 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-neutral-700 dark:text-white dark:focus:border-white"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:bg-white focus:outline-none focus:ring-blue-800 focus:border-2 focus:border-blue-800 block w-full p-2.5 dark:bg-neutral-700 dark:border-neutral-700 dark:text-white dark:focus:border-white"
           name="message"
           onChange={handleChange}
           onBlur={handleBlur}
