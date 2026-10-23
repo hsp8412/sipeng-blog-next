@@ -32,9 +32,9 @@ const PostContent = ({post}: Props) => {
           </p>
         </div>
       </div>
-      <ReactMarkdown className="mt-5 post-content text-start">
-        {post.content}
-      </ReactMarkdown>
+      <div className="mt-5 post-content text-start">
+        <ReactMarkdown>{post.content}</ReactMarkdown>
+      </div>
     </div>
   );
 };

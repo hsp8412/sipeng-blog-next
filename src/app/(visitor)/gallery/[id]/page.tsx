@@ -6,9 +6,9 @@ import PhotoDetails from "@/app/components/gallery/photoDetail";
 export const dynamic = "force-dynamic";
 
 interface PhotoModalPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 const fetchPhoto = async (id: string) => {
@@ -19,7 +19,8 @@ const fetchPhoto = async (id: string) => {
   });
 };
 
-const PhotoPage = async ({params}: PhotoModalPageProps) => {
+const PhotoPage = async (props: PhotoModalPageProps) => {
+  const params = await props.params;
   const photo = await fetchPhoto(params.id);
 
   if (!photo) {
