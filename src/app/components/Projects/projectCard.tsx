@@ -67,7 +67,7 @@ const renderLinks = (project: Project) => {
 const ProjectCard = ({project, onClick}: Props) => {
   return (
     <div
-      className="project-card w-10/12 rounded-2xl shadow-md bg-white hover:shadow-2xl transition-shadow duration-300 ease-in "
+      className="project-card rounded-lg shadow-md bg-white hover:shadow-2xl transition-shadow duration-300 ease-in "
       onClick={() => {
         onClick(project);
       }}
@@ -78,7 +78,7 @@ const ProjectCard = ({project, onClick}: Props) => {
           alt=""
           width={1000}
           height={0}
-          className="w-full rounded-t-2xl"
+          className="w-full rounded-t-lg"
         />
       </div>
       <div className="card-content px-5 py-5 flex flex-col">
@@ -92,7 +92,7 @@ const ProjectCard = ({project, onClick}: Props) => {
         >
           {project.tags.map((tag) => (
             <div
-              className="px-1 py-1 bg-indigo-600 text-white font-bold rounded hover:scale-105 transition-all duration-200 ease-in"
+              className="px-1 py-1 bg-blue-800 text-white font-light rounded hover:scale-105 transition-all duration-200 ease-in"
               key={tag}
             >
               {tag}

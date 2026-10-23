@@ -8,8 +8,12 @@ export const revalidate = 300;
 const Page = async () => {
   const projects = await prisma.project.findMany();
   return (
-    <div className={"bg-gray-200 md:px-10 py-10 flex justify-center"}>
-      <ProjectsList projects={projects} />
+    <div className={"bg-gray-200"}>
+      <div
+        className={"px-10 py-5 flex justify-center max-w-screen-2xl mx-auto"}
+      >
+        <ProjectsList projects={projects} />
+      </div>
     </div>
   );
 };

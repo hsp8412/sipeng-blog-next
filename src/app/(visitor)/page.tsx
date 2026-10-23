@@ -9,7 +9,7 @@ import {
   faGraduationCap,
   faHouse,
   faLocationDot,
-  faPersonBiking,
+  faLanguage,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import {maShanZheng} from "@/app/fonts";
@@ -17,6 +17,73 @@ import ProfileButton from "@/app/components/buttons/profileButton";
 
 const canadaFlag = "\uD83C\uDDE8\uD83C\uDDE6";
 // const chinaFlag = "\uD83C\uDDE8\uD83C\uDDF3";
+
+const skills = [
+  {
+    name: "C#",
+    color: "bg-[#239120]",
+  },
+  {
+    name: "Python",
+    color: "bg-[#3776ab]",
+  },
+  {
+    name: "HTML",
+    color: "bg-[#e34c26]",
+  },
+  {
+    name: "JavaScript",
+    color: "bg-[#f7df1e]",
+  },
+  {
+    name: "TypeScript",
+    color: "bg-[#3178c6]",
+  },
+  {
+    name: "CSS",
+    color: "bg-[#563d7c]",
+  },
+  {
+    name: "React",
+    color: "bg-[#61dafb]",
+  },
+  {
+    name: "Next.js",
+    color: "bg-[#000000]",
+  },
+  {
+    name: "Angular",
+    color: "bg-[#e10079]",
+  },
+  {
+    name: ".NET",
+    color: "bg-[#512bd4]",
+  },
+  {
+    name: "AWS",
+    color: "bg-[#ff9900]",
+  },
+  {
+    name: "Node.js",
+    color: "bg-[#83cd29]",
+  },
+  {
+    name: "Git",
+    color: "bg-[#f05032]",
+  },
+  {
+    name: "SQL",
+    color: "bg-[#f29111]",
+  },
+  {
+    name: "MongoDB",
+    color: "bg-[#47a248]",
+  },
+  {
+    name: "Docker",
+    color: "bg-[#2496ed]",
+  },
+];
 
 const Page = () => {
   return (
@@ -78,72 +145,72 @@ const Page = () => {
             <h4 className="text-4xl font-bold my-2 text-center md:text-start">
               Profile
             </h4>
-            <div className="my-5">
+            <div className="my-3">
               <div className="flex justify-start items-center gap-2 text-blue-800">
                 <FontAwesomeIcon icon={faUser} size="xl" />
-                <h5 className="text-2xl font-semibold">Full Name:</h5>
+                <h5 className="text-xl font-semibold">Full Name:</h5>
               </div>
-              <p className="text-2xl">
+              <p className="text-lg">
                 Sipeng He (<span className={maShanZheng.className}>何斯鹏</span>
                 )
               </p>
             </div>
             <hr />
-            <div className="my-5">
+            <div className="my-3">
               <div className="flex justify-start items-center gap-2 text-blue-800">
                 <FontAwesomeIcon icon={faLocationDot} size="xl" />
-                <h5 className="text-2xl font-semibold">Current Location:</h5>
+                <h5 className="text-xl font-semibold">Current Location:</h5>
               </div>
-              <p className="text-2xl">
+              <p className="text-lg">
                 Calgary, AB,{" "}
                 <span className="text-red-600 font-bold">Canada</span>{" "}
                 {canadaFlag}
               </p>
             </div>
             <hr />
-            <div className="my-5">
+            <div className="my-3">
               <div className="flex justify-start items-center gap-2 text-blue-800">
                 <FontAwesomeIcon icon={faHouse} size="xl" />
-                <h5 className="text-2xl font-semibold">Hometown:</h5>
+                <h5 className="text-xl font-semibold">Hometown:</h5>
               </div>
-              <p className="text-2xl">Shenzhen, Guangdong, China</p>
+              <p className="text-lg">Shenzhen, Guangdong, China</p>
             </div>
             <hr />
-            <div className="my-5">
+            <div className="my-3">
               <div className="flex justify-start items-center gap-2 text-blue-800">
                 <FontAwesomeIcon icon={faEnvelope} size="xl" />
-                <h5 className="text-2xl font-semibold">Email:</h5>
+                <h5 className="text-xl font-semibold">Email:</h5>
               </div>
-              <p className="text-2xl">hsp8412@hotmail.com</p>
+              <p className="text-lg">hsp8412@hotmail.com</p>
             </div>
             <hr />
-            <div className="my-5">
+            <div className="my-3">
               <div className="flex justify-start items-center gap-2 text-blue-800">
                 <FontAwesomeIcon icon={faGraduationCap} size="xl" />
-                <h5 className="text-2xl font-semibold">Education:</h5>
+                <h5 className="text-xl font-semibold">Education:</h5>
               </div>
-              <p className="text-2xl">
+              <p className="text-lg">
                 B.Sc. in Computer Science, University of Calgary
               </p>
             </div>
             <hr />
-            <div className="my-5">
+            <div className="my-3">
               <div className="flex justify-start items-center gap-2 text-blue-800">
                 <FontAwesomeIcon icon={faBuilding} size="xl" />
-                <h5 className="text-2xl font-semibold">Current Position:</h5>
+                <h5 className="text-xl font-semibold">Current Position:</h5>
               </div>
-              <p className="text-2xl">
+              <p className="text-lg">
                 Full-Stack Application Developer at Equinox Software Design
                 Corporation
               </p>
             </div>
             <hr />
-            <div className="my-5">
+            <div className="my-3">
               <div className="flex justify-start items-center gap-2 text-blue-800">
-                <FontAwesomeIcon icon={faPersonBiking} size="xl" />
-                <h5 className="text-2xl font-semibold">Hobbies:</h5>
+                <FontAwesomeIcon icon={faLanguage} size="xl" />
+                <h5 className="text-xl font-semibold">Languages:</h5>
               </div>
-              <p className="text-2xl">Guitar, Ukulele, Hiking, Cycling</p>
+              <p className="text-lg">English, French, Chinese (Mandarin)</p>
             </div>
           </div>
           <hr className="md:hidden" />
@@ -151,122 +218,15 @@ const Page = () => {
             <h4 className="mb-4 text-3xl font-bold text-center md:text-start">
               Skills
             </h4>
-            <div className="my-5">
-              <div className="mb-1 text-xl dark:text-white">HTML/CSS</div>
-              <div className="w-full h-6 bg-gray-200 rounded-full dark:bg-gray-700">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {skills.map((skill, index) => (
                 <div
-                  className="h-6 bg-blue-800 rounded-full dark:bg-blue-800 text-center text-white"
-                  style={{width: "90%"}}
+                  key={index}
+                  className={`flex items-center justify-center ${skill.color} text-white text-lg font-light py-4 hover:scale-105 translate-x-0 transition-transform duration-300 ease-in-out`}
                 >
-                  90%
+                  {skill.name}
                 </div>
-              </div>
-            </div>
-            <div className="my-5">
-              <div className="mb-1 text-xl dark:text-white">
-                JavaScript/TypeScript
-              </div>
-              <div className="w-full h-6 bg-gray-200 rounded-full dark:bg-gray-700">
-                <div
-                  className="h-6 bg-blue-800 rounded-full dark:bg-blue-800 text-center text-white"
-                  style={{width: "90%"}}
-                >
-                  90%
-                </div>
-              </div>
-            </div>
-            <div className="my-5">
-              <div className="mb-1 text-xl dark:text-white">React/Next.js</div>
-              <div className="w-full h-6 bg-gray-200 rounded-full dark:bg-gray-700">
-                <div
-                  className="h-6 bg-blue-800 rounded-full dark:bg-blue-800 text-center text-white"
-                  style={{width: "90%"}}
-                >
-                  90%
-                </div>
-              </div>
-            </div>
-            <div className="my-5">
-              <div className="mb-1 text-xl dark:text-white">tailwind CSS</div>
-              <div className="w-full h-6 bg-gray-200 rounded-full dark:bg-gray-700">
-                <div
-                  className="h-6 bg-blue-800 rounded-full dark:bg-blue-800 text-center text-white"
-                  style={{width: "85%"}}
-                >
-                  85%
-                </div>
-              </div>
-            </div>
-            <div className="my-5">
-              <div className="mb-1 text-xl dark:text-white">
-                C#/ASP.NET core
-              </div>
-              <div className="w-full h-6 bg-gray-200 rounded-full dark:bg-gray-700">
-                <div
-                  className="h-6 bg-blue-800 rounded-full dark:bg-blue-800 text-center text-white"
-                  style={{width: "85%"}}
-                >
-                  85%
-                </div>
-              </div>
-            </div>
-            <div className="my-5">
-              <div className="mb-1 text-xl dark:text-white">Bootstrap</div>
-              <div className="w-full h-6 bg-gray-200 rounded-full dark:bg-gray-700">
-                <div
-                  className="h-6 bg-blue-800 rounded-full dark:bg-blue-800 text-center text-white"
-                  style={{width: "85%"}}
-                >
-                  85%
-                </div>
-              </div>
-            </div>
-            <div className="my-5">
-              <div className="mb-1 text-xl dark:text-white">Node.js</div>
-              <div className="w-full h-6 bg-gray-200 rounded-full dark:bg-gray-700">
-                <div
-                  className="h-6 bg-blue-800 rounded-full dark:bg-blue-800 text-center text-white"
-                  style={{width: "80%"}}
-                >
-                  80%
-                </div>
-              </div>
-            </div>
-
-            <div className="my-5">
-              <div className="mb-1 text-xl dark:text-white">
-                Java/Spring Boot
-              </div>
-              <div className="w-full h-6 bg-gray-200 rounded-full dark:bg-gray-700">
-                <div
-                  className="h-6 bg-blue-800 rounded-full dark:bg-blue-800 text-center text-white"
-                  style={{width: "70%"}}
-                >
-                  70%
-                </div>
-              </div>
-            </div>
-            <div className="my-5">
-              <div className="mb-1 text-xl dark:text-white">SSIS</div>
-              <div className="w-full h-6 bg-gray-200 rounded-full dark:bg-gray-700">
-                <div
-                  className="h-6 bg-blue-800 rounded-full dark:bg-blue-800 text-center text-white"
-                  style={{width: "70%"}}
-                >
-                  70%
-                </div>
-              </div>
-            </div>
-            <div className="my-5">
-              <div className="mb-1 text-xl dark:text-white">Python</div>
-              <div className="w-full h-6 bg-gray-200 rounded-full dark:bg-gray-700">
-                <div
-                  className="h-6 bg-blue-800 rounded-full dark:bg-blue-800 text-center text-white"
-                  style={{width: "70%"}}
-                >
-                  70%
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

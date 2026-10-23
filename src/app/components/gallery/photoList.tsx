@@ -9,7 +9,7 @@ const fetchPhotos = async () => {
 const PhotoList = async () => {
   const photos = await fetchPhotos();
   return (
-    <div className="px-5 py-10 columns-1 md:columns-2 xl:columns-3 gap-5">
+    <div className="px-5 py-5 columns-1 md:columns-2 xl:columns-3">
       {photos.map((photo, index) => (
         <Link key={photo.id} href={`/gallery/${photo.id}`} scroll={false}>
           <div className={`${index !== 0 && "mt-5"}`}>

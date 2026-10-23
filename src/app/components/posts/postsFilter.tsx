@@ -13,13 +13,13 @@ const PostsFilter = ({posts, activeFilter, setFilter}: Props) => {
   tags = _.uniq(tags);
   return (
     <div className="w-full flex px-4 py-4 shadow bg-white mt-5 md:mt-0 xl:mt-5 md:ms-5 xl:ms-0 items-center">
-      <div className={"flex flex-wrap gap-2"}>
+      <div className={"flex flex-wrap gap-2 font-light"}>
         {tags.map((tag) => (
           <div
             key={`tag-${tag}`}
             className={`px-2 py-1 ${
-              activeFilter === tag ? "bg-blue-800" : "bg-teal-500"
-            } hover:bg-blue-800 text-white rounded-2xl cursor-pointer`}
+              activeFilter === tag ? "bg-blue-800" : "bg-sky-600"
+            } hover:bg-blue-800 text-white rounded-md cursor-pointer transition-colors duration-400 ease-in-out`}
             onClick={() => {
               setFilter(tag);
             }}
@@ -28,7 +28,7 @@ const PostsFilter = ({posts, activeFilter, setFilter}: Props) => {
           </div>
         ))}
         <div
-          className={`px-2 py-1 bg-blue-800 text-white rounded-2xl cursor-pointer hover:bg-teal-500`}
+          className={`px-2 py-1 bg-blue-800 text-white rounded-md cursor-pointer hover:bg-sky-600 transition-colors`}
           onClick={() => {
             setFilter("");
           }}

@@ -12,8 +12,8 @@ const PostContent = ({post}: Props) => {
     return <div>Loading...</div>;
   }
   return (
-    <div>
-      <h1 className="post-title text-5xl font-bold text-center md:text-start">
+    <div className="post-container bg-white p-5 rounded-lg shadow-md">
+      <h1 className="post-title text-3xl font-semibold text-center md:text-start">
         {post.title}
       </h1>
       <br />
@@ -23,11 +23,11 @@ const PostContent = ({post}: Props) => {
           alt="avatar"
           className="post-avatar w-20 rounded-full"
         />
-        <div className="flex flex-col items-start justify-center ms-5 gap-3">
-          <p className=" post-info-author text-2xl md:text-3xl font-semibold text-blue-800">
+        <div className="flex flex-col items-start justify-center ms-5 gap-1">
+          <p className=" post-info-author text-lg md:text-xl font-semibold text-blue-800">
             {"Sipeng He"}
           </p>
-          <p className="post-info-date text-xl font-light">
+          <p className="post-info-date text-sm font-light">
             {dayjs(post.createdAt).format("ddd MMM DD YYYY")}
           </p>
         </div>

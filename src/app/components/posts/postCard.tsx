@@ -33,7 +33,7 @@ const PostCard = ({post, setActiveFilter}: Props) => {
         <div className="mt-3 flex flex-wrap gap-2">
           {post.tags.map((tag, index) => (
             <button
-              className="post-tag px-1 rounded bg-teal-500 text-white font-light hover:scale-105"
+              className="post-tag p-1 rounded-sm bg-sky-600 text-white font-light hover:scale-105 transition-transform duration-500 ease-in-out"
               onClick={() => setActiveFilter(tag)}
               key={index}
             >

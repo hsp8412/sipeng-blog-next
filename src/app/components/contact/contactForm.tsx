@@ -146,7 +146,7 @@ const ContactForm = () => {
       <div className="flex px-3 mt-3 justify-center md:justify-start items-center">
         <button
           type="submit"
-          className="bg-indigo-600 text-white px-3 py-2 rounded me-3 flex justify-center items-center"
+          className="bg-blue-800 text-white px-3 py-2 rounded me-3 flex justify-center items-center hover:scale-105 transition-all duration-200 ease-in"
           disabled={submitted}
         >
           <svg

@@ -1,8 +1,8 @@
 "use client";
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import {GoogleReCaptchaProvider} from "react-google-recaptcha-v3";
 import ContactForm from "@/app/components/contact/contactForm";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faEnvelope} from "@fortawesome/free-solid-svg-icons/faEnvelope";
 
 const ContactFormWrapper = () => {
   return (
@@ -11,9 +11,9 @@ const ContactFormWrapper = () => {
         <div className="contact-title flex justify-start items-center">
           <FontAwesomeIcon
             icon={faEnvelope}
-            className="me-2 md:me-3 text-indigo-600 font-bold dark:text-white"
+            className="me-2 md:me-3 text-blue-800 font-bold dark:text-white"
           />
-          <p className={"text-indigo-600 font-bold text-xl sm:text-4xl"}>
+          <p className={"text-blue-800 font-bold text-xl sm:text-4xl"}>
             Send me a message
           </p>
         </div>

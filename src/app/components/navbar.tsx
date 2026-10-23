@@ -1,12 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEarthAsia,
-  faBars,
-  faXmark,
-} from "@fortawesome/free-solid-svg-icons";
-import { usePathname, useRouter } from "next/navigation";
+import React, {useEffect, useState} from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faEarthAsia, faBars, faXmark} from "@fortawesome/free-solid-svg-icons";
+import {usePathname, useRouter} from "next/navigation";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -39,10 +35,10 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { label: "Posts", link: "/posts" },
-    { label: "Projects", link: "/projects" },
-    { label: "Gallery", link: "/gallery" },
-    { label: "Contact", link: "/contact" },
+    {label: "Posts", link: "/posts"},
+    {label: "Projects", link: "/projects"},
+    {label: "Gallery", link: "/gallery"},
+    {label: "Contact", link: "/contact"},
   ];
 
   // if (pathName === "/") {
@@ -73,7 +69,7 @@ const Navbar = () => {
                 href={item.link}
                 className={`text-center w-full table hover:bg-gray-100 hover:text-black text-black ${
                   pathName === "/" ? "md:text-white" : "md:text-black"
-                } transition-all ease-in-out duration-200 rounded-0 font-bold text-2xl px-3 py-2 md:hover:rounded-3xl`}
+                } transition-all ease-in-out duration-200 rounded-0 font-bold text-2xl px-3 py-2 md:hover:rounded-3xl ${pathName === item.link && "underline"}`}
               >
                 {item.label}
               </Link>
