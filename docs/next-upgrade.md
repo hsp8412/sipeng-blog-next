@@ -15,3 +15,27 @@ The source checkout and its existing dependency edits are preserved.
 - [x] Supported checks and affected runtime behavior pass on the final target.
 
 No source migration is required specifically for major 14.
+
+## Next.js 15 review
+
+- [x] React and React DOM use 19.3.1, with matching React 19 types.
+- [x] The three dynamic routes await promise-based `params` before fetching data.
+  There are no `cookies`, `headers`, `draftMode`, or `searchParams` consumers,
+  unsafe unwrap casts, or unresolved codemod review markers.
+- [x] Fonts already use `next/font`. No deprecated bundling configuration,
+  `NextRequest.geo`/`ip`, automatic Speed Insights, or `experimental-edge` runtime
+  is used.
+- [x] Existing 300-second post/project revalidation and dynamic gallery behavior
+  are preserved. The only fetch is a reCAPTCHA POST; no cached GET handler or
+  default fetch caching requires migration. Client navigation was verified.
+- [x] Headless UI, reCAPTCHA, Markdown, Font Awesome, and the typing animation
+  dependencies are compatible with React 19 and the final TypeScript resolver.
+- [x] The React 18-only comments wrapper is replaced by the native Utterances
+  embed, retaining its repository, pathname matching, and theme. The embed cleans
+  up on route changes and unmounts.
+- [x] Supported checks and affected runtime behavior pass on the final target.
+
+The automatic React recipe could not create its per-user configuration directory
+inside the sandbox. Manual review of the React 19 upgrade guide found no legacy
+render/hydrate APIs, string refs, legacy context, function defaults/prop types, or
+form-state APIs to migrate. The React type codemod completed without changes.
